@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>{{ site.title }}</title>
+
+    <meta name="author" content="Simon Bilsky-Rollins">
+
+    <meta name="viewport" content="width=700, user-scalable=no" />
+
+    <link href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre|Roboto" rel="stylesheet">
+    <link href="/assets/css/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+    {% assign sections = site.sections | sort: 'order' %}
+    {% assign projects = site.projects | sort: 'end_date' | reverse %}
+
+    {% include navigation.html %}
+
+    <article itemscope itemtype="http://schema.org/Person" class="contents">
+
+        <div class="heading">
+            <h1 itemprop="name">
+                {{ site.title }}
+            </h1>
+        </div>
+
+        {% for section in sections %}
+        {% include section.html %}
+        {% endfor %}
+
+    </article>
+
+    <div class="credits">
+        <p>
+            Website design adapted from Hakim El Hattab's <a
+                href="https://github.com/hakimel/css/tree/master/progress-nav" target="_top">Progress Nav experiment</a>
+        </p>
+    </div>
+
+    <script src="/assets/js/script.js"></script>
+
+</body>
+
+</html>

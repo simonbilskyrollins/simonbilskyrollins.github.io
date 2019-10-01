@@ -1,0 +1,7 @@
+<section>
+    {% if section.image != nil %}
+    <img class="profile-pic" src="{{ section.image }}">
+    {% endif %}
+    <h2 id="{{ section.identifier }}">{{ section.title }}</h2>
+    {{ section.content }}
+</section>
