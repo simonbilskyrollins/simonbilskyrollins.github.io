@@ -9,4 +9,4 @@ The app is still in active development, and we recently released it on the App S
 
 [Website](https://shottey.com)
 
-![](http://www.cs.carleton.edu/cs_comps/1718/volleyball/final-results/img/vis.png)
+![](https://cs.carleton.edu/cs_comps/1718/volleyball/final-results/img/vis.png)
